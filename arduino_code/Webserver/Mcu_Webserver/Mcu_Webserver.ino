@@ -1,8 +1,8 @@
 #include<ESP8266WiFi.h>
 #include<ESP8266WebServer.h>
 
-const char* ssid = "KT_GIGA_2G_Wave2_9561";
-const char* passwd = "ch62be0914";
+const char* ssid = "iptime5";
+const char* passwd = "";
 
 const int HTTP_PORT = 80;
 ESP8266WebServer webServer(HTTP_PORT);
@@ -18,7 +18,7 @@ bool ledmcuC = false;
 
 void setup(){
 
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(ledesp,OUTPUT);
   pinMode(ledmcu,OUTPUT);
 
@@ -168,10 +168,3 @@ String SendHTML(bool led1_on, uint8_t led2_on){
   
   return ptr;
 }
-
-
-
-
-
-
-  

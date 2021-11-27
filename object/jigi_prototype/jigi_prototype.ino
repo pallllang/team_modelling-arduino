@@ -82,12 +82,12 @@ void loop(){
 //    Serial.println(light_st);    
 //  }
 
-  int person_num = Function_Ultra(tr,ec);
-  if(person_num == 1){
-    tot_person ++;
-    Serial.print("Total Person : ");
-    Serial.println(tot_person);
-  }
+//  int person_num = Function_Ultra(tr,ec);
+//  if(person_num == 1){
+//    tot_person ++;
+//    Serial.print("Total Person : ");
+//    Serial.println(tot_person);
+//  }
 
   
 
