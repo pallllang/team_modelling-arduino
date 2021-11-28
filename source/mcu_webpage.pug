@@ -1,0 +1,129 @@
+doctype html
+html(lang="ko")
+  head
+    title Smart Room - Jigi
+    // link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    style.
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+        background-color: #24252A;
+      }
+
+      li, a, button, span {
+        font-size: 16px;
+        font-weight: 500;
+        color: #edf0f1;
+        text-decoration: none;
+      }
+      .homeNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding : 30px 20px;
+        border-bottom: 1px solid #edf0f1;
+      }
+      .homeNav__links {
+        list-style:none;
+      }
+
+      .homeNav__links li {
+        display: inline-block;
+        padding: 0px 20px;
+      }
+
+      .homeNav__links li a {
+        transition: all 0.3s ease 0s;
+      }
+
+      .homeNav__links li a:hover{
+        color: #0088a9;
+      }
+
+      button {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+
+      button:hover { 
+        background-color: rgba(0, 136, 169, 0.8);
+      }
+
+      .homeHeader{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .homeHeader div{
+        margin-top: 30px;
+      }
+      .homeHeader div span{
+
+        font-size: 50px;
+        font-weight: Bold;
+      }
+      .homeMain {
+        height: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .homeMain article {
+        width: 50%;
+        max-width: 600px;
+        height: 500px;
+        margin: 50px;
+        border-radius: 40px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .roomCnt, .isLight {
+        background-color: rgba(0, 136, 169, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .roomCnt div:first-child, .isLight div:first-child{
+        height: 15%;
+        width: 100%;
+        border-bottom: 7px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .roomCnt div:first-child span, .isLight div:first-child span{
+        font-size: 20px;
+        font-weight: bold;
+      }
+  body
+    nav.homeNav
+      span.logo 지기 SMART-ROOM
+      ul.homeNav__links
+        li 
+          a(href="/") 과방 Status
+        li 
+          a(href="/") 과방 예약
+        li
+          a(href="/") Alert 알림
+      a.cta(href="#")
+        button Contact
+    header.homeHeader 
+      div 
+        span 과방 Status
+    main.homeMain
+      article.roomCnt
+        div 
+          span how many people in this room?
+        div 
+          span=print
+        div.space
+
