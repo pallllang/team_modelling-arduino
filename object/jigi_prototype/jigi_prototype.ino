@@ -59,7 +59,9 @@ int Function_Ultra(int tr,int ec){
 
 int Function_Light(int val){
 
-  if(val > 230){ light_status  =git add false;key == 1 ? 0: 1;}
+
+  if(val > 230){ light_status  = false;key == 1 ? 0: 1;}
+
   else {light_status  = true;key == 1 ? 0: 1;}
 
   if(light_status == 1 && key == 0){ Serial.println("Light Status is ON"); key = 1 ; return 1;}
@@ -81,13 +83,13 @@ void loop(){
 //  if(light_st == 1 || light_st == 0 ){
 //    Serial.println(light_st);    
 //  }
-
+  
   int person_num = Function_Ultra(tr,ec);
   if(person_num == 1){
     tot_person ++;
     Serial.print("Total Person : ");
     Serial.println(tot_person);
   }
-  
+
   
 }
