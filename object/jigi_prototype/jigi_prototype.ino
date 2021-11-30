@@ -1,28 +1,15 @@
-#include <SoftwareSerial.h>
 #include <Servo.h>
-
-   
-#include <SoftwareSerial.h>
-SoftwareSerial bts = SoftwareSerial(5,3);
-
 const int light = A0;// 조도 센
 int light_status = false,key = 0;
-
-const int tr = 10;
-const int ec = 11;
 int tot_person = 0;
 
 Servo ms;
 
 void setup(){
 
-  ms.attach(6);
-
-  pinMode(tr,OUTPUT);
-  pinMode(ec,INPUT);
- 
+  // ms.attach(6);
   Serial.begin(9600);
-  bts.begin(9600);
+  Serial1.begin(9600);
   
   pinMode(light, INPUT);
 }
@@ -50,8 +37,8 @@ int Function_Ultra(int tr,int ec){
 //  Serial.print(result);
 //  Serial.println( "cm");
 //
-//  bts.print(result);
-//  bts.println(" cm");
+//  Serial1.print(result);
+//  Serial1.println(" cm");
 
 //  delay(1000);
   
@@ -82,21 +69,11 @@ void loop(){
 //    Serial.println(light_st);    
 //  }
 
-//  int person_num = Function_Ultra(tr,ec);
-//  if(person_num == 1){
-//    tot_person ++;
-//    Serial.print("Total Person : ");
-//    Serial.println(tot_person);
-//  }
-
-  
-
-  
-
-  
-  
-  
-   
-  
-  
+  // int person_num = Function_Ultra(tr,ec);
+  // if(person_num == 1){
+  //   tot_person ++;
+  //   Serial.print("Total Person : ");
+  //   Serial.println(tot_person);
+  // }
+ 
 }
