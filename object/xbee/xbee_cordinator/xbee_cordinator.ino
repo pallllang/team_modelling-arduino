@@ -10,8 +10,12 @@ Servo sv_crd;
 int dir_crd = 1;
 int angle_crd = 0;
 
+//서보
 long pwm_sv_crd = 0;//회전 초기값
 long interval_crd = 15;//회전 시간 간격
+//초음파
+long pwm_uw_crd = 0;//회전 초기값
+long interval_uw = 2;//회전 시간 간격
  
 void setup() {
   
@@ -38,6 +42,21 @@ void loop() {
   else if (angle_crd > 180 || angle_crd <0)  dir_crd = (dir_crd==1?0:1);
   
   }
+
+  unsigned long millis_cnt_uw = millis();
+  digitalWrite(trig, HIGH);
+//   delay(2);
+  digitalWrite(trig, LOW);
+
+  float duration = pulseIn(echo, HIGH);
+  float distance = duration * 0.034 / 2;
+
+  Serial.println(distance);
+  if(millis_cnt_uw - pwm_uw_crd >= interval_uw){
+
+      pwm_uw_crd = millis_cnt_uw;
+  }
+  
   
   
 }

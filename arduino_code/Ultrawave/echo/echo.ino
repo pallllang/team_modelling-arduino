@@ -1,5 +1,6 @@
-int echo = 3;
-int trig = 2;
+/*echo*/
+int echo = 9;
+int trig = 8;
 
 void setup()
 {
@@ -18,5 +19,6 @@ void loop()
   float duration = pulseIn(echo, HIGH);
   float distance = duration * 0.034 / 2;
 
+  delay(100);
   Serial.println(distance);
 }
